@@ -1,12 +1,28 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Courses from './components/Courses'
+import Partners from './components/Partners'
+import FAQ from './components/FAQ'
+import ContactUs from './components/ContactUs'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Aptech Home Page
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Courses />
+        <Partners />
+        <FAQ />
+        <ContactUs />
+      </main>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

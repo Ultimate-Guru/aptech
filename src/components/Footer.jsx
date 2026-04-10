@@ -30,9 +30,10 @@ const Footer = () => {
           <div>
             <p className="font-semibold text-white">Quick Links</p>
             <ul className="mt-3 space-y-2">
-              <li>Programs</li>
-              <li>Admissions</li>
-              <li>Careers</li>
+              <li><a href="#about" className="transition">About Us</a></li>
+              <li><a href="#courses" className="transition">Courses</a></li>
+              <li><a href="#partners" className="transition">Partners</a></li>
+              <li><a href="#faq" className="transition">FAQs</a></li>
             </ul>
           </div>
           <div>

@@ -1,6 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { toast } from 'react-toastify';
+import { User, Mail, Send } from 'lucide-react';
 
 const ContactUs = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+
+        const form = event.target;
+        const formData = new FormData(form);
+        formData.append('access_key', '34a66b07-eacf-4b2c-9836-429a901f88ab');
+
+        const request = fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        }).then(async (response) => {
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || 'Something went wrong. Please try again.');
+            }
+
+            return data;
+        });
+
+        try {
+            await toast.promise(request, {
+                pending: 'Sending your message...',
+                success: 'Form submitted successfully!',
+                error: {
+                    render({ data }) {
+                        return data?.message || 'Unable to send message.';
+                    },
+                },
+            });
+
+            form.reset();
+        } catch (error) {
+            console.error('Contact form submission failed:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
     return (
         <section className="px-6 py-20 sm:px-10 lg:px-16 bg-linear-to-b from-white to-slate-50" id="contact">
 
@@ -58,55 +101,55 @@ const ContactUs = () => {
                             </div>
 
                             {/* Form Section */}
-                            <form className="space-y-6">
+                            <form onSubmit={onSubmit} className="space-y-6">
                                 <div className="grid gap-4 sm:grid-cols-2">
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-950 mb-2" htmlFor="name">
-                                            Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            id="name"
-                                            autoComplete="name"
-                                            required
-                                            className="block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-                                        />
+                                        <p className='mb-2 text-sm font-medium text-slate-950'>Your name</p>
+                                        <div className='flex items-center pl-3 rounded-lg border border-slate-300 bg-white focus-within:border-orange-500 focus-within:ring-2 focus-within:ring-orange-500/20'>
+                                            <User className="h-5 w-5 text-slate-400 mr-2" />
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                placeholder='Enter your name'
+                                                required
+                                                className='w-full p-3 text-sm outline-none bg-transparent'
+                                            />
+                                        </div>
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-950 mb-2" htmlFor="email">
-                                            Email
-                                        </label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            id="email"
-                                            autoComplete="email"
-                                            required
-                                            className="block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-                                        />
+                                        <p className='mb-2 text-sm font-medium text-slate-950'>Your Email</p>
+                                        <div className='flex items-center pl-3 rounded-lg border border-slate-300 bg-white focus-within:border-orange-500 focus-within:ring-2 focus-within:ring-orange-500/20'>
+                                            <Mail className="h-5 w-5 text-slate-400 mr-2" />
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                placeholder='Enter your email'
+                                                required
+                                                className='w-full p-3 text-sm outline-none bg-transparent'
+                                            />
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-slate-950 mb-2" htmlFor="message">
-                                        Message
-                                    </label>
+                                    <p className='mb-2 text-sm font-medium text-slate-950'>Message</p>
                                     <textarea
                                         name="message"
-                                        id="message"
+                                        placeholder='Enter your message'
                                         required
                                         rows={5}
-                                        className="block w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+                                        className='w-full p-3 text-sm outline-none rounded-lg border border-slate-300 bg-white transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20'
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-orange-600/20 transition hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 sm:w-auto cursor-pointer"
+                                    disabled={isSubmitting}
+                                    className="inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-orange-600/20 transition hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-orange-500/20 sm:w-auto cursor-pointer"
                                 >
-                                    Send Message
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    <Send className="ml-2 h-4 w-4" />
                                 </button>
                             </form>
 

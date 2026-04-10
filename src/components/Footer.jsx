@@ -11,7 +11,7 @@ const Footer = () => {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-400">Ready to transform your tech career?</p>
             <h2 className="mt-4 text-3xl font-semibold">Start your journey with Aptech today.</h2>
           </div>
-          <a href="#contact" className="mt-8 inline-flex rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-orange-700 sm:mt-0">
+          <a href="#contact" className="mt-8 inline-flex rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-orange-700 sm:mt-0 whitespace-nowrap">
             Book a Free Consultation
           </a>
         </div>

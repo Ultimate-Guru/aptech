@@ -42,7 +42,7 @@ const Hero = () => {
 
                 </div>
 
-                <div className="relative max-w-xl rounded-4xl bg-slate-950/95 px-8 py-10 text-white shadow-2xl shadow-slate-950/10 sm:px-10">
+                <div className="hidden lg:block relative max-w-xl rounded-4xl bg-slate-950/95 px-8 py-10 text-white shadow-2xl shadow-slate-950/10 sm:px-10">
                     <div className="absolute -left-10 top-6 h-28 w-28 rounded-full bg-orange-500/20 blur-3xl" />
                     <div className="absolute right-6 top-0 h-24 w-24 rounded-full bg-cyan-400/20 blur-3xl" />
                     <div className="relative space-y-6">

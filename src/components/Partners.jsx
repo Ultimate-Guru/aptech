@@ -1,30 +1,69 @@
 import React from 'react'
-
-const partners = ['Lincoln University', 'MiddleSex University', 'BanGor University', 'ISM', 'NCC']
+import Lincoln from '../assets/images/lincoln.png'
+import Middle from '../assets/images/middlesex.png'
+import NCC from '../assets/images/ncc.png'
+import ISM from '../assets/images/ism.png'
+import Bangor from '../assets/images/bangor.png'
 
 const Partners = () => {
     return (
-        <section id="partners" className="bg-slate-950 px-6 py-16 text-white sm:px-10 lg:px-16">
+        <div id='partners' className="bg-slate-900 py-24 sm:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-400">Our Partners</p>
+                <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Trusted by leading education and industry partners.</h2>
+                <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6">
+                    <div className="flex items-center justify-center rounded-3xl border border-slate-700/40 bg-white p-5 shadow-lg shadow-slate-950/20">
+                        <img
+                            alt="Lincoln University"
+                            src={Lincoln}
+                            width={158}
+                            height={48}
+                            className="h-12 w-auto max-w-full object-contain"
+                        />
+                    </div>
 
-            <div className="mx-auto max-w-7xl">
+                    <div className="flex items-center justify-center rounded-3xl border border-slate-700/40 bg-white p-5 shadow-lg shadow-slate-950/20">
+                        <img
+                            alt="MiddleSex University"
+                            src={Middle}
+                            width={158}
+                            height={48}
+                            className="h-12 w-auto max-w-full object-contain"
+                        />
+                    </div>
 
-                <div className="mb-10 text-center">
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-400">Our Partners</p>
-                    <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Trusted by leading education and industry partners.</h2>
+                    <div className="flex items-center justify-center rounded-3xl border border-slate-700/40 bg-white p-5 shadow-lg shadow-slate-950/20">
+                        <img
+                            alt="NCC Education"
+                            src={NCC}
+                            width={158}
+                            height={48}
+                            className="h-12 w-auto max-w-full object-contain"
+                        />
+                    </div>
+
+                    <div className="flex items-center justify-center rounded-3xl border border-slate-700/40 bg-white p-5 shadow-lg shadow-slate-950/20">
+                        <img
+                            alt="ISM University"
+                            src={ISM}
+                            width={158}
+                            height={48}
+                            className="h-12 w-auto max-w-full object-contain"
+                        />
+                    </div>
+
+                    <div className="flex items-center justify-center rounded-3xl border border-slate-700/40 bg-white p-5 shadow-lg shadow-slate-950/20">
+                        <img
+                            alt="Bangor University"
+                            src={Bangor}
+                            width={200}
+                            height={100}
+                            className="h-12 w-auto max-w-full object-contain"
+                        />
+                    </div>
                 </div>
-
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-                    {partners.map((name) => (
-                        <div key={name} className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm font-semibold text-slate-100 shadow-sm backdrop-blur-sm">
-                            {name}
-                        </div>
-                    ))}
-                </div>
-
             </div>
-
-        </section>
+        </div>
     )
 }
-
 export default Partners

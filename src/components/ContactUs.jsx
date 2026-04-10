@@ -139,7 +139,7 @@ const ContactUs = () => {
                                         placeholder='Enter your message'
                                         required
                                         rows={5}
-                                        className='w-full p-3 text-sm outline-none rounded-lg border border-slate-300 bg-white transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20'
+                                        className='w-full p-3 text-sm outline-none rounded-lg border border-slate-300 bg-white transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 min-h-32 max-h-80'
                                     />
                                 </div>
 

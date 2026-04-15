@@ -35,7 +35,7 @@ const Footer = () => {
             Book a Free Consultation
           </a>
         </div>
-        <div className="mt-10 grid gap-8 text-sm text-slate-400 sm:grid-cols-3">
+        <div className="mt-10 grid md:grid-cols-3 gap-8 text-sm text-slate-400">
           <div>
             <p className="font-semibold text-white">Aptech Satellite</p>
             <p className="flex gap-2 mt-3 mb-2">
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           <div>
             <p className="font-semibold text-white">Quick Links</p>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-3  space-y-2">
               <li><a href="#about" className="transition">About Us</a></li>
               <li><Link to="/courses" className="transition">Courses</Link></li>
               <li><a href="#partners" className="transition">Partners</a></li>

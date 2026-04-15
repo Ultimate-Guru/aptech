@@ -4,14 +4,24 @@ import TikTok from '../assets/images/tok.png'
 import Instagram from '../assets/images/insta.png'
 import { MailIcon, PhoneCallIcon, Calendar, } from 'lucide-react'
 
+const TikTokIcon = ({ size = 20, color = "currentColor" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill={color}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.75 2.9 2.9 0 0 1 2.31-4.64 2.88 2.88 0 0 1 .88.13V9.4a5.79 5.79 0 0 0-1-.09A5.9 5.9 0 0 0 5 20.6a5.9 5.9 0 0 0 5.9 5.9 5.85 5.85 0 0 0 5.9-5.9V12.64a7.75 7.75 0 0 0 3.79 1.75v-3.72a4.3 4.3 0 0 1-.61-.05z" />
+  </svg>
+);
+
 const Footer = () => {
 
   const socialLinks = [
     {
       href: 'https://www.tiktok.com/@aptech_satellite',
-      icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v12.7a2.85 2.85 0 1 1-5.92-2.86 2.87 2.87 0 0 1 2.31 1.08V9.4a6.15 6.15 0 1 0 10.86 3.28v-5.09a4.82 4.82 0 0 0 3.36 1.31v-3.83a4.9 4.9 0 0 1-.36-.04z" fill="currentColor" />
-      </svg>,
+      icon: <TikTokIcon size={20} color="#ffffff" />,
       alt: 'TikTok'
     },
     {

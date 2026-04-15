@@ -32,10 +32,6 @@ const Hero = () => {
                             <p className="mt-2 text-sm text-slate-500">Practical curriculum</p>
                         </div>
                         <div className="rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-sm">
-                            <p className="text-3xl font-semibold text-slate-950">25+</p>
-                            <p className="mt-2 text-sm text-slate-500">Expert mentors</p>
-                        </div>
-                        <div className="rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-sm">
                             <p className="text-3xl font-semibold text-slate-950">4.9/5</p>
                             <p className="mt-2 text-sm text-slate-500">Student satisfaction</p>
                         </div>

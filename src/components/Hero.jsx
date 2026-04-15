@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowRight, Play } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -19,10 +20,10 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <a href="#courses" className="inline-flex items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-orange-600/20 transition hover:bg-orange-700 cursor-pointer">
+                        <Link to="/courses" className="inline-flex items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-orange-600/20 transition hover:bg-orange-700 cursor-pointer">
                             Explore Courses
                             <ArrowRight className="ml-3 h-4 w-4" />
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="grid gap-4 sm:grid-cols-3">

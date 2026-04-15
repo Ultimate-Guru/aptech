@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import design from '../assets/images/design.jpg'
 import Logo from '../assets/images/Logo.jpg'
 
@@ -9,12 +9,12 @@ const Navbar = () => {
 
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-10 lg:px-16">
 
-                <a href="#">
+                <Link to="/">
                     <img src={Logo} alt="Aptech's Logo" className='w-32 sm:w-40' loading='lazy' />
-                </a>
+                </Link>
                 <nav className="hidden items-center gap-8 md:flex text-sm font-semibold text-slate-700">
-                    <a href="#about" className="transition hover:text-slate-950">About Us</a>
-                    <a href="#courses" className="transition hover:text-slate-950">Courses</a>
+                    <Link to="/" className="transition hover:text-slate-950">Home</Link>
+                    <Link to="/courses" className="transition hover:text-slate-950">Courses</Link>
                     <a href="#partners" className="transition hover:text-slate-950">Partners</a>
                     <a href="#faq" className="transition hover:text-slate-950">FAQs</a>
                 </nav>

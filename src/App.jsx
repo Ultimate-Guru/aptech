@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './Home'
 import CoursesPage from './CoursesPage'
 import Footer from './components/Footer'
+import Whatsapp from './components/Whatsapp'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/courses" element={<CoursesPage />} />
       </Routes>
       <Footer />
+    <Whatsapp />
     </BrowserRouter>
   )
 }

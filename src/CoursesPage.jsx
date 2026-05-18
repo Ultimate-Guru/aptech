@@ -18,12 +18,6 @@ const shortTermCourses = [
     badge: 'Short-Term',
   },
   {
-    title: 'Graphics Design',
-    description: 'Develop skills in Adobe Creative Suite, visual communication, and digital design techniques.',
-    duration: '2 months',
-    badge: 'Short-Term',
-  },
-  {
     title: 'Advanced Digital Marketing',
     description: 'Explore SEO, social media marketing, content strategy, and analytics for online business growth.',
     duration: '4 months',
@@ -32,13 +26,13 @@ const shortTermCourses = [
   {
     title: 'Web Development',
     description: 'Build complete web applications with frontend and backend technologies, and /deployment.',
-    duration: '5 months',
+    duration: '4 months',
     badge: 'Short-Term',
   },
   {
     title: 'Data Analysis',
     description: 'Learn data visualization, statistical analysis, and tools like Excel, Python, and Tableau.',
-    duration: '5 months',
+    duration: '3 months',
     badge: 'Short-Term',
   },
   {
@@ -68,7 +62,7 @@ const shortTermCourses = [
   {
     title: 'UI/UX Design',
     description: 'Design user interfaces and experiences with wireframing, prototyping, and usability principles.',
-    duration: '2 months',
+    duration: '3 months',
     badge: 'Short-Term',
   },
 ]

@@ -4,7 +4,7 @@ import About from './components/About'
 import Courses from './components/Courses'
 import Partners from './components/Partners'
 import FAQ from './components/FAQ'
-import ContactUs from './components/ContactUs'
+import Contact from './components/Contact'
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <Courses />
       <Partners />
       <FAQ />
-      <ContactUs />
+      <Contact />
     </main>
   )
 }

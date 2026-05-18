@@ -1,7 +1,7 @@
 import React from 'react'
 import Courses from './components/Courses'
 import Partners from './components/Partners'
-import ContactUs from './components/ContactUs'
+import Contact from './components/Contact'
 import { CheckCircle2 } from 'lucide-react'
 
 const shortTermCourses = [
@@ -113,7 +113,7 @@ const CoursesPage = () => {
         </div>
       </section>
       <Partners />
-      <ContactUs />
+      <Contact />
     </main>
   )
 }
